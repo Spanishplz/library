@@ -20,6 +20,21 @@ p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-size: 1.5rem;
+}
+
+
+.library {
+    border: 1px solid green;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-auto-rows: 250px;
+    justify-items: center;
+    align-items: center;
+}
+
+
+.card {
+    border: 1px solid white;
 }
