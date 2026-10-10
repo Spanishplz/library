@@ -16,41 +16,62 @@ function Book(name,
     this.format = format;
     this.currency = currency;
     this.price = price;
-    this.currentPage = current;
+    this.read = current;
     this.id = id;
 }
 
-let firstBook = ["How to win friends and influence people",
-                 "Dale Carnegie",
-                 "English",
-                 317,
-                 "Kindle",
-                 "USD",
-                 9.73,
-                 25];
 
-function addBookToLibrary(arr) {
-    //loop the array of books 
+let secondBook = {
+    name: "How to win friends and influence people",
+    author: "Dale Carnegie",
+    language: "English",
+    pages: 317,
+    format: "Kindle",
+    currency: "USD",
+    price: 9.73,
+    read: true,
+
+}
+
+function addBookToLibrary(bookInput) {
     let id = crypto.randomUUID();
-    const book = new Book(arr[0],
-                          arr[1],
-                          arr[2],
-                          arr[3],
-                          arr[4],
-                          arr[5],
-                          arr[6],
-                          arr[7],
+    const book = new Book(bookInput.name,
+                          bookInput.author,
+                          bookInput.language,
+                          bookInput.pages,
+                          bookInput.format,
+                          bookInput.currency,
+                          bookInput.price,
+                          bookInput.read,
                           id);
 
     myLibrary.push(book);
 }
 
 for(let i = 0; i < 5; i++) {
-    addBookToLibrary(firstBook);
+    addBookToLibrary(secondBook);
 }
 
 
 console.log(myLibrary);
 
+// let firstBook = ["How to win friends and influence people",
+//                  "Dale Carnegie",
+//                  "English",
+//                  317,
+//                  "Kindle",
+//                  "USD",
+//                  9.73,
+//                  true];
 
+
+// const book = new Book(arr[0],
+//     arr[1],
+//     arr[2],
+//     arr[3],
+//     arr[4],
+//     arr[5],
+//     arr[6],
+//     arr[7],
+//     id);
 
