@@ -75,3 +75,16 @@ console.log(myLibrary);
 //     arr[7],
 //     id);
 
+let obj = {
+    "name": "How to win friends and influence people",
+    "author": "Dale Carnegie",
+    "language": "English",
+    "pages": 317,
+    "format": "Kindle",
+    "currency": "USD",
+    "price": 9.73,
+    "read": true,
+    "id": "f0886242-5a5b-4c8c-b67c-1c4122fbc989"
+}
+
+

@@ -1,4 +1,4 @@
-*, ::before, ::after {
+*, ::before, ::after{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -40,4 +40,70 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .card {
     border: 1px solid white;
+}
+
+.add-book {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 500px;
+    /* height: 300px; */
+    border: 1px solid orange;
+    background-color: gold;
+}
+
+form {
+    
+}
+
+
+.form-text-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    & label {
+        padding: 10px;
+        text-align: left;
+    }
+
+    & input[type="text"] {
+        padding: 10px;
+        color: green;
+        font-size: 1.2rem;
+    }
+}
+
+fieldset {
+    padding-top: 30px;
+    position: relative;
+    border: none;
+    background-color: gold;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+legend {
+    margin-bottom: 48px;
+    top: 10px;
+    left: 10px;
+    /* border: 1px solid grey; */
+    position: absolute;
+    text-align: left;
+
+}
+
+.button-wrapper {
+    padding: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.add-button {
+    padding: 5px 20px;
+    font-size: inherit;
+    border-radius: 10px;
+    border: 1px solid black;
+    
 }
