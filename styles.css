@@ -49,6 +49,7 @@ p, h1, h2, h3, h4, h5, h6 {
     /* height: 300px; */
     border: 1px solid orange;
     background-color: gold;
+    padding: 10px 40px;
 }
 
 form {
@@ -73,7 +74,7 @@ form {
 }
 
 fieldset {
-    padding-top: 30px;
+    padding-top: 50px;
     position: relative;
     border: none;
     background-color: gold;

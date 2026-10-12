@@ -88,3 +88,42 @@ let obj = {
 }
 
 
+const addButton = document.querySelector(".add-button");
+console.log(addButton);
+
+
+addButton.addEventListener('click', (e)=> {
+    e.preventDefault();
+    let newObject = {};
+    for (let field of textFields) {
+        console.log(field.value);
+        // make an object out of this
+        
+    }
+
+    for (let radio of radioFields) {
+        console.log(radio.checked);
+        if(radio.checked) {
+            // radio.checked.
+            // need to add it to the object
+        }
+    }
+    console.log(radioFields);
+})
+
+
+const textFields = document.querySelectorAll('.input-text');
+console.log(textFields);
+
+let counter = 0;
+for (let field of textFields) {
+    counter++;
+    field.value = `This is the number: ${counter}`;
+}
+
+
+const radioFields = document.querySelectorAll(".input-radio");
+for (let radio of radioFields) {
+    console.log(radio.value);
+}
+console.log(radioFields);
