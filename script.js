@@ -79,9 +79,11 @@ addButton.addEventListener('click', (e)=> {
             newObject.read = radio.value;
         }
     }
+    
     console.log(newObject);
     addBookToLibrary(newObject);
     console.log(myLibrary);
+    createCards(myLibrary);
 })
 
 
@@ -129,3 +131,38 @@ for (let radio of radioFields) {
     // console.log(radio.value);
 }
 console.log(radioFields);
+
+const library = document.querySelector(".library");
+
+// function to loop and create cards
+
+function createCards(arr) {
+    library.replaceChildren(); // cleans old children
+    for(let book of  arr) {
+        let card = document.createElement('div');
+        card.classList.add("card");
+        library.appendChild(card);
+        console.log(Object.keys(book).length);
+        let bookProperties = Object.keys(book);
+        let bookValues = Object.values(book);
+        let propertiesNumber = Object.keys(book).length;
+        for (let i = 0; i < propertiesNumber ; i++ ) {
+            // console.log(bookProperties[i]);
+            if (bookValues[i] == undefined) {
+                continue;
+            }
+            let para = document.createElement("p");
+            if (i == 0) {
+                para.classList.add("title");
+                let paraText = document.createTextNode(`${bookValues[i]}`);
+                para.appendChild(paraText);
+                card.appendChild(para);
+            } else {
+                let paraText = document.createTextNode(`${bookProperties[i]}: ${bookValues[i]}`);
+                para.appendChild(paraText);
+                card.appendChild(para);
+            }
+        }
+    }
+}
+
