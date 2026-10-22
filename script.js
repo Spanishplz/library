@@ -152,13 +152,19 @@ function createCards(arr) {
                 continue;
             }
             let para = document.createElement("p");
+            
             if (i == 0) {
                 para.classList.add("title");
                 let paraText = document.createTextNode(`${bookValues[i]}`);
+                
                 para.appendChild(paraText);
                 card.appendChild(para);
             } else {
-                let paraText = document.createTextNode(`${bookProperties[i]}: ${bookValues[i]}`);
+                let span = document.createElement("span");
+                let paraSpan = document.createTextNode(`${bookProperties[i]}: `);
+                let paraText = document.createTextNode(`${bookValues[i]}`);
+                span.appendChild(paraSpan);
+                para.appendChild(span);
                 para.appendChild(paraText);
                 card.appendChild(para);
             }
